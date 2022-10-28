@@ -26,10 +26,9 @@ public class Permutations_46 {
     }
 
     public List<List<Integer>> recursive_permute(List<Integer> numList, int index){
-        if(index == 2){
+        if (index == 1) {
             List<List<Integer>> tempList = new ArrayList<>();
             tempList.add(numList);
-            tempList.add(swap(numList, numList.size()-2, numList.size()-1));
             return tempList;
         } else{
             List<List<Integer>> currentList = new ArrayList<>();
@@ -45,11 +44,14 @@ public class Permutations_46 {
 
     public List<Integer> swap (List<Integer> nums, int index1, int index2){
         List<Integer> new_nums = new ArrayList<>();
+        for (Integer integer : nums) {
+            new_nums.add(integer);
+        }
         Integer value1 = nums.get(index1);
         Integer value2 = nums.get(index2);
-        nums.set(index1, value2);
-        nums.set(index2, value1);
-        return nums;
+        new_nums.set(index1, value2);
+        new_nums.set(index2, value1);
+        return new_nums;
         
     }
 }
