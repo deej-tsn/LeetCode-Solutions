@@ -1,3 +1,5 @@
+package problems;
+
 /**
  * ValidSudoku_36
  */
